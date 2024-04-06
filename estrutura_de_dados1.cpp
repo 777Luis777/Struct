@@ -64,7 +64,7 @@ areas notasRedes,
 areas notasEducacaoFisica) {
 
 
-    nota1 = max(max(max(max(max(max(max(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]),notasprogramacao.moduloNota[7]);
+    nota1 = max(max(max(max(max(max(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]);
     nota2 = max(notasmatematica.moduloNota[0], notasmatematica.moduloNota[1]);
     nota3 = max(max(notasPortugues.moduloNota[0], notasPortugues.moduloNota[1]),notasPortugues.moduloNota[2]);
     nota4 = max(max(max(max(max(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
@@ -91,7 +91,7 @@ areas notasMA,
 areas notasRedes,
 areas notasEducacaoFisica) {
 
-    nota1 = min(min(min(min(min(min(min(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]),notasprogramacao.moduloNota[7]);
+    nota1 = min(min(min(min(min(min(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]);
     nota2 = min(notasmatematica.moduloNota[0], notasmatematica.moduloNota[1]);
     nota3 = min(min(notasPortugues.moduloNota[0], notasPortugues.moduloNota[1]),notasPortugues.moduloNota[2]);
     nota4 = min(min(min(min(min(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
@@ -118,7 +118,7 @@ areas notasMA,
 areas notasRedes,
 areas notasEducacaoFisica) {
 
-    nota1 = notasprogramacao.moduloNota[0]+ notasprogramacao.moduloNota[1]+ notasprogramacao.moduloNota[2]+ notasprogramacao.moduloNota[3]+notasprogramacao.moduloNota[4]+notasprogramacao.moduloNota[5]+notasprogramacao.moduloNota[6]+notasprogramacao.moduloNota[7];
+    nota1 = notasprogramacao.moduloNota[0]+ notasprogramacao.moduloNota[1]+ notasprogramacao.moduloNota[2]+ notasprogramacao.moduloNota[3]+notasprogramacao.moduloNota[4]+notasprogramacao.moduloNota[5]+notasprogramacao.moduloNota[6];
     nota2 = notasmatematica.moduloNota[0]+ notasmatematica.moduloNota[1];
     nota3 = notasPortugues.moduloNota[0]+ notasPortugues.moduloNota[1]+notasPortugues.moduloNota[2];
     nota4 = notasFisicoQuimica.moduloNota[0]+ notasFisicoQuimica.moduloNota[1]+ notasFisicoQuimica.moduloNota[2]+ notasFisicoQuimica.moduloNota[3]+notasFisicoQuimica.moduloNota[4]+notasFisicoQuimica.moduloNota[5];
@@ -164,7 +164,6 @@ int main() {
     notasprogramacao.moduloNota[4] = 0;
     notasprogramacao.moduloNota[5] = 0;
     notasprogramacao.moduloNota[6] = 0;
-    notasprogramacao.moduloNota[7] = 0;
 
     notasmatematica.areaNome = "Matematica";
     notasmatematica.moduloNome[0] = "Estatistica";
@@ -221,7 +220,7 @@ int main() {
     notasTic.moduloNome[3] = "Introducao a modelagem 3D";
     notasTic.moduloNota[0] = 0;
     notasTic.moduloNota[1] = 0;
-    notasTic.moduloNota[2] = 0;
+    notasTic.moduloNota[2] = 16;
     notasTic.moduloNota[3] = 15;
 
     notasEMRC.areaNome = "EMRC";
