@@ -64,17 +64,17 @@ areas notasRedes,
 areas notasEducacaoFisica) {
 
 
-    nota1 = max(max(max(max(max(max(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]),notasprogramacao.moduloNota[7]);
+    nota1 = max(max(max(max(max(max(max(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]),notasprogramacao.moduloNota[7]);
     nota2 = max(notasmatematica.moduloNota[0], notasmatematica.moduloNota[1]);
     nota3 = max(max(notasPortugues.moduloNota[0], notasPortugues.moduloNota[1]),notasPortugues.moduloNota[2]);
-    nota4 = max(max(max(max(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
+    nota4 = max(max(max(max(max(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
     nota5 = max(max(notasIngles.moduloNota[0], notasIngles.moduloNota[1]),notasIngles.moduloNota[2]);
     nota6 = max(notasAI.moduloNota[0], notasAI.moduloNota[1]);
-    nota7 = max(max(notasTic.moduloNota[0], notasTic.moduloNota[1]), max(notasTic.moduloNota[2], notasTic.moduloNota[3]));
+    nota7 = max(max(max(notasTic.moduloNota[0], notasTic.moduloNota[1]),notasTic.moduloNota[2]), notasTic.moduloNota[3]);
     nota8 = notasEMRC.moduloNota[0];
-    nota9 = max(max(notasMA.moduloNota[0], notasMA.moduloNota[1]), notasMA.moduloNota[2]), notasMA.moduloNota[3]);
+    nota9 = max(max(max(notasMA.moduloNota[0], notasMA.moduloNota[1]),notasMA.moduloNota[2]), notasMA.moduloNota[3]);
     nota10 = max(notasRedes.moduloNota[0], notasRedes.moduloNota[1]);
-    nota11 = max(max(max(max(notasEducacaoFisica.moduloNota[0], notasEducacaoFisica.moduloNota[1]), notasEducacaoFisica.moduloNota[2]), notasEducacaoFisica.moduloNota[3]),notasEducacaoFisica.moduloNota[4]),notasEducacaoFisica.moduloNota[5]);
+    nota11 = max(max(max(max(max(notasEducacaoFisica.moduloNota[0], notasEducacaoFisica.moduloNota[1]), notasEducacaoFisica.moduloNota[2]), notasEducacaoFisica.moduloNota[3]),notasEducacaoFisica.moduloNota[4]),notasEducacaoFisica.moduloNota[5]);
     return max(max(max(max(max(max(max(max(max(max(nota1, nota2), nota3), nota4),nota5),nota6),nota7),nota8),nota9),nota10),nota11);
 }
 
@@ -91,17 +91,17 @@ areas notasMA,
 areas notasRedes,
 areas notasEducacaoFisica) {
 
-    nota1 = min(min(min(min(min(min(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]),notasprogramacao.moduloNota[7]);
+    nota1 = min(min(min(min(min(min(min(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]),notasprogramacao.moduloNota[7]);
     nota2 = min(notasmatematica.moduloNota[0], notasmatematica.moduloNota[1]);
     nota3 = min(min(notasPortugues.moduloNota[0], notasPortugues.moduloNota[1]),notasPortugues.moduloNota[2]);
-    nota4 = min(min(min(min(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
+    nota4 = min(min(min(min(min(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
     nota5 = min(min(notasIngles.moduloNota[0], notasIngles.moduloNota[1]),notasIngles.moduloNota[2]);
     nota6 = min(notasAI.moduloNota[0], notasAI.moduloNota[1]);
-    nota7 = min(min(notasTic.moduloNota[0], notasTic.moduloNota[1]), max(notasTic.moduloNota[2], notasTic.moduloNota[3]));
+    nota7 = min(min(min(notasTic.moduloNota[0], notasTic.moduloNota[1]),notasTic.moduloNota[2]), notasTic.moduloNota[3]);
     nota8 = notasEMRC.moduloNota[0];
-    nota9 = min(min(notasMA.moduloNota[0], notasMA.moduloNota[1]), notasMA.moduloNota[2]), notasMA.moduloNota[3]);
+    nota9 = min(min(min(notasMA.moduloNota[0], notasMA.moduloNota[1]),notasMA.moduloNota[2]), notasMA.moduloNota[3]);
     nota10 = min(notasRedes.moduloNota[0], notasRedes.moduloNota[1]);
-    nota11 = min(min(min(min(notasEducacaoFisica.moduloNota[0], notasEducacaoFisica.moduloNota[1]), notasEducacaoFisica.moduloNota[2]), notasEducacaoFisica.moduloNota[3]),notasEducacaoFisica.moduloNota[4]),notasEducacaoFisica.moduloNota[5]);
+    nota11 = min(min(min(min(min(notasEducacaoFisica.moduloNota[0], notasEducacaoFisica.moduloNota[1]), notasEducacaoFisica.moduloNota[2]), notasEducacaoFisica.moduloNota[3]),notasEducacaoFisica.moduloNota[4]),notasEducacaoFisica.moduloNota[5]);
     return min(min(min(min(min(min(min(min(min(min(nota1, nota2), nota3), nota4),nota5),nota6),nota7),nota8),nota9),nota10),nota11);
 }
 
@@ -118,7 +118,7 @@ areas notasMA,
 areas notasRedes,
 areas notasEducacaoFisica) {
 
-    nota1 = notasprogramacao.moduloNota[0]+ notasprogramacao.moduloNota[1]+ notasprogramacao.moduloNota[2]+ notasprogramacao.moduloNota[3]+notasprogramacao.moduloNota[4]+notasprogramacao.moduloNota[5]+notasprogramacao.moduloNota[6]+notasprogramacao.moduloNota[7]);
+    nota1 = notasprogramacao.moduloNota[0]+ notasprogramacao.moduloNota[1]+ notasprogramacao.moduloNota[2]+ notasprogramacao.moduloNota[3]+notasprogramacao.moduloNota[4]+notasprogramacao.moduloNota[5]+notasprogramacao.moduloNota[6]+notasprogramacao.moduloNota[7];
     nota2 = notasmatematica.moduloNota[0]+ notasmatematica.moduloNota[1];
     nota3 = notasPortugues.moduloNota[0]+ notasPortugues.moduloNota[1]+notasPortugues.moduloNota[2];
     nota4 = notasFisicoQuimica.moduloNota[0]+ notasFisicoQuimica.moduloNota[1]+ notasFisicoQuimica.moduloNota[2]+ notasFisicoQuimica.moduloNota[3]+notasFisicoQuimica.moduloNota[4]+notasFisicoQuimica.moduloNota[5];
