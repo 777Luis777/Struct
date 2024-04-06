@@ -50,87 +50,62 @@ int encontraMenorNota(int notas[], int numModulos) {
     return menor;
 }
 
-int encontraMaiorNotaCurso( int nota1, int nota2, int nota3, int nota4, int nota5, int nota6, int nota7, int nota8, int nota9, int nota10, int nota11,
-areas notasprogramacao,
-areas notasmatematica,
-areas notasPortugues,
-areas notasFisicoQuimica,
-areas notasIngles,
-areas notasAI,
-areas notasTic,
-areas notasEMRC,
-areas notasMA,
-areas notasRedes,
-areas notasEducacaoFisica) {
-
-
-    nota1 = max(max(max(max(max(max(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]);
-    nota2 = max(notasmatematica.moduloNota[0], notasmatematica.moduloNota[1]);
-    nota3 = max(max(notasPortugues.moduloNota[0], notasPortugues.moduloNota[1]),notasPortugues.moduloNota[2]);
-    nota4 = max(max(max(max(max(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
-    nota5 = max(max(notasIngles.moduloNota[0], notasIngles.moduloNota[1]),notasIngles.moduloNota[2]);
-    nota6 = max(notasAI.moduloNota[0], notasAI.moduloNota[1]);
-    nota7 = max(max(max(notasTic.moduloNota[0], notasTic.moduloNota[1]),notasTic.moduloNota[2]), notasTic.moduloNota[3]);
-    nota8 = notasEMRC.moduloNota[0];
-    nota9 = max(max(max(notasMA.moduloNota[0], notasMA.moduloNota[1]),notasMA.moduloNota[2]), notasMA.moduloNota[3]);
-    nota10 = max(notasRedes.moduloNota[0], notasRedes.moduloNota[1]);
-    nota11 = max(max(max(max(max(notasEducacaoFisica.moduloNota[0], notasEducacaoFisica.moduloNota[1]), notasEducacaoFisica.moduloNota[2]), notasEducacaoFisica.moduloNota[3]),notasEducacaoFisica.moduloNota[4]),notasEducacaoFisica.moduloNota[5]);
-    return max(max(max(max(max(max(max(max(max(max(nota1, nota2), nota3), nota4),nota5),nota6),nota7),nota8),nota9),nota10),nota11);
+int encontraMaiorNotaCurso(areas todasAsAreas[], int numModulos) {
+    int maiorNota = todasAsAreas[0].moduloNota[0];
+    for (int i = 0; i < numModulos; i++) {
+        for (int y = 0; y < 20; y++) {
+            if (todasAsAreas[i].moduloNota[y] > maiorNota) {
+                maiorNota = todasAsAreas[i].moduloNota[y];
+            }
+        }
+    }
+    return maiorNota;
+}
+int encontraMenorNotaCurso(areas todasAsAreas[], int numModulos) {
+    int menorNota = todasAsAreas[0].moduloNota[0]; // Inicializa com a primeira nota do primeiro módulo
+    for (int i = 0; i < numModulos; ++i) {
+        for (int j = 0; j < 20; ++j) {
+            if (todasAsAreas[i].moduloNota[j] < menorNota) {
+                menorNota = todasAsAreas[i].moduloNota[j];
+            }
+        }
+    }
+    return menorNota;
 }
 
-int encontraMenorNotaCurso(int nota1, int nota2, int nota3, int nota4, int nota5, int nota6, int nota7, int nota8, int nota9, int nota10, int nota11,
-areas notasprogramacao,
-areas notasmatematica,
-areas notasPortugues,
-areas notasFisicoQuimica,
-areas notasIngles,
-areas notasAI,
-areas notasTic,
-areas notasEMRC,
-areas notasMA,
-areas notasRedes,
-areas notasEducacaoFisica) {
+float calculaMediaCurso(areas notasprogramacao,areas notasmatematica,areas notasPortugues,areas notasFisicoQuimica,areas notasIngles,areas notasAI,areas notasTic,areas notasEMRC,areas notasMA,areas notasRedes,areas notasEducacaoFisica) {
 
-    nota1 = min(min(min(min(min(min(notasprogramacao.moduloNota[0], notasprogramacao.moduloNota[1]), notasprogramacao.moduloNota[2]), notasprogramacao.moduloNota[3]),notasprogramacao.moduloNota[4]),notasprogramacao.moduloNota[5]),notasprogramacao.moduloNota[6]);
-    nota2 = min(notasmatematica.moduloNota[0], notasmatematica.moduloNota[1]);
-    nota3 = min(min(notasPortugues.moduloNota[0], notasPortugues.moduloNota[1]),notasPortugues.moduloNota[2]);
-    nota4 = min(min(min(min(min(notasFisicoQuimica.moduloNota[0], notasFisicoQuimica.moduloNota[1]), notasFisicoQuimica.moduloNota[2]), notasFisicoQuimica.moduloNota[3]),notasFisicoQuimica.moduloNota[4]),notasFisicoQuimica.moduloNota[5]);
-    nota5 = min(min(notasIngles.moduloNota[0], notasIngles.moduloNota[1]),notasIngles.moduloNota[2]);
-    nota6 = min(notasAI.moduloNota[0], notasAI.moduloNota[1]);
-    nota7 = min(min(min(notasTic.moduloNota[0], notasTic.moduloNota[1]),notasTic.moduloNota[2]), notasTic.moduloNota[3]);
-    nota8 = notasEMRC.moduloNota[0];
-    nota9 = min(min(min(notasMA.moduloNota[0], notasMA.moduloNota[1]),notasMA.moduloNota[2]), notasMA.moduloNota[3]);
-    nota10 = min(notasRedes.moduloNota[0], notasRedes.moduloNota[1]);
-    nota11 = min(min(min(min(min(notasEducacaoFisica.moduloNota[0], notasEducacaoFisica.moduloNota[1]), notasEducacaoFisica.moduloNota[2]), notasEducacaoFisica.moduloNota[3]),notasEducacaoFisica.moduloNota[4]),notasEducacaoFisica.moduloNota[5]);
-    return min(min(min(min(min(min(min(min(min(min(nota1, nota2), nota3), nota4),nota5),nota6),nota7),nota8),nota9),nota10),nota11);
+    int totalModulos = numModulosProgramacao + numModulosMatematica + numModulosPortugues + numModulosFisicoQuimica + numModulosIngles + numModulosAI + numModulosTIC + numModulosEMRC + numModulosMA + numModulosRedes + numModulosEducacaoFisica;
+
+    int somaNotas = 0;
+
+    // Somar as notas de cada área
+    for (int i = 0; i < numModulosProgramacao; ++i)
+        somaNotas += notasprogramacao.moduloNota[i];
+    for (int i = 0; i < numModulosMatematica; ++i)
+        somaNotas += notasmatematica.moduloNota[i];
+    for (int i = 0; i < numModulosPortugues; ++i)
+        somaNotas += notasPortugues.moduloNota[i];
+    for (int i = 0; i < numModulosFisicoQuimica; ++i)
+        somaNotas += notasFisicoQuimica.moduloNota[i];
+    for (int i = 0; i < numModulosIngles; ++i)
+        somaNotas += notasIngles.moduloNota[i];
+    for (int i = 0; i < numModulosAI; ++i)
+        somaNotas += notasAI.moduloNota[i];
+    for (int i = 0; i < numModulosTIC; ++i)
+        somaNotas += notasTic.moduloNota[i];
+    for (int i = 0; i < numModulosEMRC; ++i)
+        somaNotas += notasEMRC.moduloNota[i];
+    for (int i = 0; i < numModulosMA; ++i)
+        somaNotas += notasMA.moduloNota[i];
+    for (int i = 0; i < numModulosRedes; ++i)
+        somaNotas += notasRedes.moduloNota[i];
+    for (int i = 0; i < numModulosEducacaoFisica; ++i)
+        somaNotas += notasEducacaoFisica.moduloNota[i];
+
+    return static_cast<float>(somaNotas) / totalModulos;
 }
 
-float calculaMediaCurso(int nota1, int nota2, int nota3, int nota4, int nota5, int nota6, int nota7, int nota8, int nota9, int nota10, int nota11,
-areas notasprogramacao,
-areas notasmatematica,
-areas notasPortugues,
-areas notasFisicoQuimica,
-areas notasIngles,
-areas notasAI,
-areas notasTic,
-areas notasEMRC,
-areas notasMA,
-areas notasRedes,
-areas notasEducacaoFisica) {
-
-    nota1 = notasprogramacao.moduloNota[0]+ notasprogramacao.moduloNota[1]+ notasprogramacao.moduloNota[2]+ notasprogramacao.moduloNota[3]+notasprogramacao.moduloNota[4]+notasprogramacao.moduloNota[5]+notasprogramacao.moduloNota[6];
-    nota2 = notasmatematica.moduloNota[0]+ notasmatematica.moduloNota[1];
-    nota3 = notasPortugues.moduloNota[0]+ notasPortugues.moduloNota[1]+notasPortugues.moduloNota[2];
-    nota4 = notasFisicoQuimica.moduloNota[0]+ notasFisicoQuimica.moduloNota[1]+ notasFisicoQuimica.moduloNota[2]+ notasFisicoQuimica.moduloNota[3]+notasFisicoQuimica.moduloNota[4]+notasFisicoQuimica.moduloNota[5];
-    nota5 = notasIngles.moduloNota[0]+ notasIngles.moduloNota[1]+notasIngles.moduloNota[2];
-    nota6 = notasAI.moduloNota[0]+ notasAI.moduloNota[1];
-    nota7 = notasTic.moduloNota[0]+ notasTic.moduloNota[1]+ notasTic.moduloNota[2]+ notasTic.moduloNota[3];
-    nota8 = notasEMRC.moduloNota[0];
-    nota9 = notasMA.moduloNota[0]+ notasMA.moduloNota[1]+ notasMA.moduloNota[2]+notasMA.moduloNota[3];
-    nota10 = notasRedes.moduloNota[0]+ notasRedes.moduloNota[1];
-    nota11 = notasEducacaoFisica.moduloNota[0]+ notasEducacaoFisica.moduloNota[1]+ notasEducacaoFisica.moduloNota[2]+ notasEducacaoFisica.moduloNota[3]+notasEducacaoFisica.moduloNota[4]+notasEducacaoFisica.moduloNota[5];
-    return (nota1+ nota2+ nota3+ nota4+nota5+nota6+nota7+nota8+nota9+nota10+nota11) / 11;
-}
 
 
 int main() {
@@ -146,8 +121,9 @@ int main() {
     areas notasRedes;
     areas notasEducacaoFisica;
     string nome;
-    int op, op1, op2, op3,nota1,  nota2,  nota3,  nota4,  nota5,  nota6,  nota7,  nota8,  nota9,  nota10,  nota11;
-
+    int op, op1, op2, op3;
+    areas todasAsAreas[] = {notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica};
+    areas nota1,  nota2,  nota3,  nota4,  nota5,  nota6,  nota7,  nota8,  nota9,  nota10,  nota11;
     // Inicialização das notas
     notasprogramacao.areaNome = "Programacao";
     notasprogramacao.moduloNome[0] = "Algoritmia";
@@ -439,14 +415,15 @@ int main() {
                     cout << "Opção inválida!" << endl;
                 }
                 break;
-           case 4:
-                cout << "A maior nota de todo o curso = " << encontraMaiorNotaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica, nota1,  nota2,  nota3,  nota4,  nota5,  nota6,  nota7,  nota8,  nota9,  nota10,  nota11) << endl;
+            case 4:
+                cout << "A maior nota de todo o curso = " << encontraMaiorNotaCurso(todasAsAreas, 11) << endl;
                 break;
             case 5:
-                cout << "A menor nota de todo o curso = " << encontraMenorNotaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica, nota1,  nota2,  nota3,  nota4,  nota5,  nota6,  nota7,  nota8,  nota9,  nota10,  nota11) << endl;
+                cout << "A menor nota de todo o curso = " << encontraMenorNotaCurso(todasAsAreas, 11) << endl;
                 break;
+
             case 6:
-                cout << "A média de todo o curso = " << calculaMediaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica, nota1,  nota2,  nota3,  nota4,  nota5,  nota6,  nota7,  nota8,  nota9,  nota10,  nota11) << endl;
+                cout << "A média de todo o curso = " << calculaMediaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica) << endl;
                 break;
             default:
                 cout << "Opção inválida. Por favor, escolha uma opção válida." << endl;
@@ -455,6 +432,5 @@ int main() {
 
     return 0;
 }
-
 
 
