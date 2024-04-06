@@ -49,30 +49,124 @@ int encontraMenorNota(int notas[], int numModulos) {
     }
     return menor;
 }
-
-int encontraMaiorNotaCurso(areas todasAsAreas[], int numModulos) {
-    int maiorNota = todasAsAreas[0].moduloNota[0];
-    for (int i = 0; i < numModulos; i++) {
-        for (int y = 0; y < 20; y++) {
-            if (todasAsAreas[i].moduloNota[y] > maiorNota) {
-                maiorNota = todasAsAreas[i].moduloNota[y];
-            }
+int encontraMaiorNotaCurso(areas notasprogramacao, areas notasmatematica, areas notasPortugues, areas notasFisicoQuimica, areas notasIngles, areas notasAI, areas notasTic, areas notasEMRC, areas notasMA, areas notasRedes, areas notasEducacaoFisica) {
+    int maiorNota = 0;
+    for (int i = 0; i < numModulosProgramacao; ++i) {
+        if (notasprogramacao.moduloNota[i] > maiorNota) {
+            maiorNota = notasprogramacao.moduloNota[i];
+        }
+    }
+    for (int y = 0; y < numModulosMatematica; ++y) {
+        if (notasmatematica.moduloNota[y] > maiorNota) {
+            maiorNota = notasmatematica.moduloNota[y];
+        }
+    }
+    for (int z = 0; z < numModulosPortugues; ++z) {
+        if (notasPortugues.moduloNota[z] > maiorNota) {
+            maiorNota = notasPortugues.moduloNota[z];
+        }
+    }
+    for (int a = 0; a < numModulosFisicoQuimica; ++a) {
+        if (notasFisicoQuimica.moduloNota[a] > maiorNota) {
+            maiorNota = notasFisicoQuimica.moduloNota[a];
+        }
+    }
+    for (int l = 0; l < numModulosAI; ++l) {
+        if (notasAI.moduloNota[l] > maiorNota) {
+            maiorNota = notasAI.moduloNota[l];
+        }
+    }
+    for (int j = 0; j < numModulosTIC; ++j) {
+        if (notasTic.moduloNota[j] > maiorNota) {
+            maiorNota = notasTic.moduloNota[j];
+        }
+    }
+    for (int s = 0; s < numModulosEMRC; ++s) {
+        if (notasEMRC.moduloNota[s] > maiorNota) {
+            maiorNota = notasEMRC.moduloNota[s];
+        }
+    }
+    for (int e = 0; e < numModulosMA; ++e) {
+        if (notasMA.moduloNota[e] > maiorNota) {
+            maiorNota = notasMA.moduloNota[e];
+        }
+    }
+    for (int m = 0; m < numModulosRedes; ++m) {
+        if (notasRedes.moduloNota[m] > maiorNota) {
+            maiorNota = notasRedes.moduloNota[m];
+        }
+    }
+    for (int p = 0; p < numModulosEducacaoFisica; ++p) {
+        if (notasEducacaoFisica.moduloNota[p] > maiorNota) {
+            maiorNota = notasEducacaoFisica.moduloNota[p];
+        }
+    }
+    for (int n = 0; n < numModulosIngles; ++n) {
+        if (notasIngles.moduloNota[n] > maiorNota) {
+            maiorNota = notasIngles.moduloNota[n];
         }
     }
     return maiorNota;
 }
-int encontraMenorNotaCurso(areas todasAsAreas[], int numModulos) {
-    int menorNota = todasAsAreas[0].moduloNota[0]; // Inicializa com a primeira nota do primeiro módulo
-    for (int i = 0; i < numModulos; ++i) {
-        for (int j = 0; j < 20; ++j) {
-            if (todasAsAreas[i].moduloNota[j] < menorNota) {
-                menorNota = todasAsAreas[i].moduloNota[j];
-            }
+int encontraMenorNotaCurso(areas notasprogramacao, areas notasmatematica, areas notasPortugues, areas notasFisicoQuimica, areas notasIngles, areas notasAI, areas notasTic, areas notasEMRC, areas notasMA, areas notasRedes, areas notasEducacaoFisica) {
+    int menorNota = 0;
+    for (int i = 0; i < numModulosProgramacao; ++i) {
+        if (notasprogramacao.moduloNota[i] < menorNota) {
+            menorNota = notasprogramacao.moduloNota[i];
+        }
+    }
+    for (int y = 0; y < numModulosMatematica; ++y) {
+        if (notasmatematica.moduloNota[y] < menorNota) {
+            menorNota = notasmatematica.moduloNota[y];
+        }
+    }
+    for (int z = 0; z < numModulosPortugues; ++z) {
+        if (notasPortugues.moduloNota[z] < menorNota) {
+            menorNota = notasPortugues.moduloNota[z];
+        }
+    }
+    for (int a = 0; a < numModulosFisicoQuimica; ++a) {
+        if (notasFisicoQuimica.moduloNota[a] < menorNota) {
+            menorNota = notasFisicoQuimica.moduloNota[a];
+        }
+    }
+    for (int l = 0; l < numModulosAI; ++l) {
+        if (notasAI.moduloNota[l] < menorNota) {
+            menorNota = notasAI.moduloNota[l];
+        }
+    }
+    for (int j = 0; j < numModulosTIC; ++j) {
+        if (notasTic.moduloNota[j] < menorNota) {
+            menorNota = notasTic.moduloNota[j];
+        }
+    }
+    for (int s = 0; s < numModulosEMRC; ++s) {
+        if (notasEMRC.moduloNota[s] < menorNota) {
+            menorNota = notasEMRC.moduloNota[s];
+        }
+    }
+    for (int e = 0; e < numModulosMA; ++e) {
+        if (notasMA.moduloNota[e] < menorNota) {
+            menorNota = notasMA.moduloNota[e];
+        }
+    }
+    for (int m = 0; m < numModulosRedes; ++m) {
+        if (notasRedes.moduloNota[m] < menorNota) {
+            menorNota = notasRedes.moduloNota[m];
+        }
+    }
+    for (int p = 0; p < numModulosEducacaoFisica; ++p) {
+        if (notasEducacaoFisica.moduloNota[p] < menorNota) {
+            menorNota = notasEducacaoFisica.moduloNota[p];
+        }
+    }
+    for (int n = 0; n < numModulosIngles; ++n) {
+        if (notasIngles.moduloNota[n] < menorNota) {
+            menorNota = notasIngles.moduloNota[n];
         }
     }
     return menorNota;
 }
-
 float calculaMediaCurso(areas notasprogramacao,areas notasmatematica,areas notasPortugues,areas notasFisicoQuimica,areas notasIngles,areas notasAI,areas notasTic,areas notasEMRC,areas notasMA,areas notasRedes,areas notasEducacaoFisica) {
 
     int totalModulos = numModulosProgramacao + numModulosMatematica + numModulosPortugues + numModulosFisicoQuimica + numModulosIngles + numModulosAI + numModulosTIC + numModulosEMRC + numModulosMA + numModulosRedes + numModulosEducacaoFisica;
@@ -416,12 +510,11 @@ int main() {
                 }
                 break;
             case 4:
-                cout << "A maior nota de todo o curso = " << encontraMaiorNotaCurso(todasAsAreas, 11) << endl;
+                cout << "A maior nota de todo o curso = " << encontraMaiorNotaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica) << endl;
                 break;
             case 5:
-                cout << "A menor nota de todo o curso = " << encontraMenorNotaCurso(todasAsAreas, 11) << endl;
+                cout << "A menor nota de todo o curso = " << encontraMenorNotaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica) << endl;
                 break;
-
             case 6:
                 cout << "A média de todo o curso = " << calculaMediaCurso(notasprogramacao, notasmatematica, notasPortugues, notasFisicoQuimica, notasIngles, notasAI, notasTic, notasEMRC, notasMA, notasRedes, notasEducacaoFisica) << endl;
                 break;
